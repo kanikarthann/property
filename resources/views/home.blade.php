@@ -24,7 +24,7 @@
                             <div class="tab-pane fade show active" id="buy-pane" role="tabpanel" aria-labelledby="buy-tab" tabindex="0">
                                 <form class="row g-2 g-md-3 align-items-stretch">
                                     <div class="col-12 col-md-5">
-                                        <input type="text" class="form-control form-control-ml" placeholder="Location (e.g., Singapore)">
+                                        <input type="text" class="form-control form-control-ml" placeholder="Location (e.g., Phnom Penh)">
                                     </div>
                                     <div class="col-12 col-sm-6 col-md-3">
                                         <select class="form-select form-select-ml">
@@ -43,7 +43,7 @@
                                         </select>
                                     </div>
                                     <div class="col-12 col-md-1 d-grid d-md-block">
-                                        <button type="button" class="btn btn-ml btn-dark w-100">Search</button>
+                                        <button type="button" class="btn btn-ml btn-dark w-120">Search</button>
                                     </div>
                                 </form>
                             </div>
@@ -103,34 +103,275 @@
     </div>
 </section>
 
-<section>
-    <div class="container py-5">
-        <h2 class="h4 fw-semibold mb-4">Featured categories</h2>
-        <div class="row g-3">
-            <div class="col-12 col-md-4">
-                <a href="{{ route('buy') }}" class="text-decoration-none">
-                    <div class="p-4 border rounded-3 h-100">
-                        <h3 class="h5 mb-1">Homes for Sale</h3>
-                        <p class="text-secondary mb-0">Browse listings available to buy.</p>
+
+<!-- Buy -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-1">Featured Properties</h2>
+        <p class="text-center text-secondary mb-5">Discover our handpicked selection of premium properties available for sale and rent</p>
+        <div class="row g-4 justify-content-center">
+
+            {{-- Property Card 1 (Sale) --}}
+            <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                <div class="card property-card shadow-sm border-0 w-100">
+                    <div class="position-relative">
+                        {{-- Placeholder Image (Use your own image URL) --}}
+                        <img src="https://www.movemeto.com/ontario/img/luxury-homes-for-sale.jpg" class="card-img-top property-img" alt="Modern 3-Bedroom Condo" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-primary text-white position-absolute top-0 start-0 m-2">Featured</span>
+                        <span class="badge bg-success text-white position-absolute top-0 start-0 ms-auto m-2" style="left: 65px!important;">For Sale</span>
+                        <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2 rounded-circle shadow-sm" aria-label="Add to favorites">
+                            <i class="bi bi-heart"></i>
+                            <>
                     </div>
-                </a>
-            </div>
-            <div class="col-12 col-md-4">
-                <a href="{{ route('rent') }}" class="text-decoration-none">
-                    <div class="p-4 border rounded-3 h-100">
-                        <h3 class="h5 mb-1">Homes for Rent</h3>
-                        <p class="text-secondary mb-0">Find rentals that fit your budget.</p>
+                    <div class="card-body">
+                        <h4 class="card-title h5 fw-bold text-dark mb-1">$1,200,000</h4>
+                        <p class="card-text mb-2 fw-semibold">Modern 3-Bedroom Condo with City Views</p>
+                        <p class="text-secondary mb-3"><i class="bi bi-geo-alt-fill me-1"></i> Marina Bay, District 1</p>
+                        <div class="d-flex justify-content-between text-secondary mb-3 small">
+                            <span><i class="bi bi-house-door me-1"></i> 3</span>
+                            <span><i class="bi bi-rulers me-1"></i> 2</span>
+                            <span><i class="bi bi-car me-1"></i> 1</span>
+                            <span><i class="bi bi-square-fill me-1"></i> 1,200 sqft</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-dark btn-sm flex-fill">View Details</a>
+                            <a href="#" class="btn btn-dark btn-sm flex-fill">Contact Agent</a>
+                        </div>
                     </div>
-                </a>
+                </div>
             </div>
-            <div class="col-12 col-md-4">
-                <a href="{{ route('agents') }}" class="text-decoration-none">
-                    <div class="p-4 border rounded-3 h-100">
-                        <h3 class="h5 mb-1">Find an Agent</h3>
-                        <p class="text-secondary mb-0">Connect with experienced agents.</p>
+            {{-- Property Card 2 (Sale - HDB) --}}
+            <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                <div class="card property-card shadow-sm border-0 w-100">
+                    <div class="position-relative">
+                        {{-- Placeholder Image (Use your own image URL) --}}
+                        <img src="https://www.movemeto.com/ontario/img/luxury-homes-for-sale.jpg" class="card-img-top property-img" alt="Modern 3-Bedroom Condo" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-primary text-white position-absolute top-0 start-0 m-2">Featured</span>
+                        <span class="badge bg-success text-white position-absolute top-0 start-0 ms-auto m-2" style="left: 65px!important;">For Sale</span>
+                        <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2 rounded-circle shadow-sm" aria-label="Add to favorites">
+                            <i class="bi bi-heart"></i>
+                             <>
+                        </button>
                     </div>
-                </a>
+                    <div class="card-body">
+                        <h4 class="card-title h5 fw-bold text-dark mb-1">$1,200,000</h4>
+                        <p class="card-text mb-2 fw-semibold">Modern 3-Bedroom Condo with City Views</p>
+                        <p class="text-secondary mb-3"><i class="bi bi-geo-alt-fill me-1"></i> Marina Bay, District 1</p>
+                        <div class="d-flex justify-content-between text-secondary mb-3 small">
+                            <span><i class="bi bi-house-door me-1"></i> 3</span>
+                            <span><i class="bi bi-rulers me-1"></i> 2</span>
+                            <span><i class="bi bi-car me-1"></i> 1</span>
+                            <span><i class="bi bi-square-fill me-1"></i> 1,200 sqft</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-dark btn-sm flex-fill">View Details</a>
+                            <a href="#" class="btn btn-dark btn-sm flex-fill">Contact Agent</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            {{-- Property Card 3 (Sale - HDB) --}}
+            <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                <div class="card property-card shadow-sm border-0 w-100">
+                    <div class="position-relative">
+                        {{-- Placeholder Image (Use your own image URL) --}}
+                        <img src="https://www.movemeto.com/ontario/img/luxury-homes-for-sale.jpg" class="card-img-top property-img" alt="Cozy 2-Bedroom HDB" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-primary text-white position-absolute top-0 start-0 m-2">Featured</span>
+                        <span class="badge bg-success text-white position-absolute top-0 start-0 ms-auto m-2" style="left: 65px!important;">For Sale</span>
+                        <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2 rounded-circle shadow-sm" aria-label="Add to favorites">
+                            <i class="bi bi-heart"></i>
+                             <>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title h5 fw-bold text-dark mb-1">$450,000</h4>
+                        <p class="card-text mb-2 fw-semibold">Cozy 2-Bedroom HDB in Mature Estate</p>
+                        <p class="text-secondary mb-3"><i class="bi bi-geo-alt-fill me-1"></i> Toa Payoh, District 12</p>
+                        <div class="d-flex justify-content-between text-secondary mb-3 small">
+                            <span><i class="bi bi-house-door me-1"></i> 2</span>
+                            <span><i class="bi bi-rulers me-1"></i> 1</span>
+                            <span><i class="bi bi-car me-1"></i> 0</span>
+                            <span><i class="bi bi-square-fill me-1"></i> 850 sqft</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-dark btn-sm flex-fill">View Details</a>
+                            <a href="#" class="btn btn-dark btn-sm flex-fill">Contact Agent</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- Property Card 4 (Sale - HDB) --}}
+           <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                <div class="card property-card shadow-sm border-0 w-100">
+                    <div class="position-relative">
+                        {{-- Placeholder Image (Use your own image URL) --}}
+                        <img src="https://www.movemeto.com/ontario/img/luxury-homes-for-sale.jpg" class="card-img-top property-img" alt="Modern 3-Bedroom Condo" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-primary text-white position-absolute top-0 start-0 m-2">Featured</span>
+                        <span class="badge bg-success text-white position-absolute top-0 start-0 ms-auto m-2" style="left: 65px!important;">For Sale</span>
+                        <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2 rounded-circle shadow-sm" aria-label="Add to favorites">
+                            <i class="bi bi-heart"></i>
+                             <>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title h5 fw-bold text-dark mb-1">$1,200,000</h4>
+                        <p class="card-text mb-2 fw-semibold">Modern 3-Bedroom Condo with City Views</p>
+                        <p class="text-secondary mb-3"><i class="bi bi-geo-alt-fill me-1"></i> Marina Bay, District 1</p>
+                        <div class="d-flex justify-content-between text-secondary mb-3 small">
+                            <span><i class="bi bi-house-door me-1"></i> 3</span>
+                            <span><i class="bi bi-rulers me-1"></i> 2</span>
+                            <span><i class="bi bi-car me-1"></i> 1</span>
+                            <span><i class="bi bi-square-fill me-1"></i> 1,200 sqft</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-dark btn-sm flex-fill">View Details</a>
+                            <a href="#" class="btn btn-dark btn-sm flex-fill">Contact Agent</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="text-center mt-5">
+            <a href="{{route('sell')}}" class="btn btn-lg btn-outline-dark">View All Properties</a>
+        </div>
+    </div>
+</section>
+<!-- Rent -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-1">Featured Properties</h2>
+        <p class="text-center text-secondary mb-5">Discover our handpicked selection of premium properties available for sale and rent</p>
+        <div class="row g-4 justify-content-center">
+
+            {{-- Property Card 1 (Rent) --}}
+           <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                <div class="card property-card shadow-sm border-0 w-100">
+                    <div class="position-relative">
+                        {{-- Placeholder Image (Use your own image URL) --}}
+                        <img src="https://i2.au.reastatic.net/800x600/dbce6c9fb221a7493eeb9da13a1e3c0dbc29c372757dcc325c2070ba7a6bc8f1/image.jpg" class="card-img-top property-img" alt="Executive Apartment" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-primary text-white position-absolute top-0 start-0 m-2">Featured</span>
+                        <span class="badge bg-warning text-dark position-absolute top-0 start-0 ms-auto m-2" style="left: 65px!important;">For Rent</span>
+                        <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2 rounded-circle shadow-sm" aria-label="Add to favorites">
+                            <i class="bi bi-heart"></i>
+                             <>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title h5 fw-bold text-dark mb-1">$3,200 <span class="fw-normal text-secondary small">/month</span></h4>
+                        <p class="card-text mb-2 fw-semibold">Executive Apartment with Garden View</p>
+                        <p class="text-secondary mb-3"><i class="bi bi-geo-alt-fill me-1"></i> Bukit Timah, District 21</p>
+                        <div class="d-flex justify-content-between text-secondary mb-3 small">
+                            <span><i class="bi bi-house-door me-1"></i> 3</span>
+                            <span><i class="bi bi-rulers me-1"></i> 2</span>
+                            <span><i class="bi bi-car me-1"></i> 1</span>
+                            <span><i class="bi bi-square-fill me-1"></i> 1,100 sqft</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-dark btn-sm flex-fill">View Details</a>
+                            <a href="#" class="btn btn-dark btn-sm flex-fill">Contact Agent</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Property Card 2 (Rent) --}}
+            <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                <div class="card property-card shadow-sm border-0 w-100">
+                    <div class="position-relative">
+                        {{-- Placeholder Image (Use your own image URL) --}}
+                        <img src="https://i2.au.reastatic.net/800x600/dbce6c9fb221a7493eeb9da13a1e3c0dbc29c372757dcc325c2070ba7a6bc8f1/image.jpg" alt="Luxury Penthouse" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-primary text-white position-absolute top-0 start-0 m-2">Featured</span>
+                        <span class="badge bg-warning text-dark position-absolute top-0 start-0 ms-auto m-2" style="left: 65px!important;">For Rent</span>
+                        <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2 rounded-circle shadow-sm" aria-label="Add to favorites">
+                            <i class="bi bi-heart"></i>
+                             <>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title h5 fw-bold text-dark mb-1">$8,500 <span class="fw-normal text-secondary small">/month</span></h4>
+                        <p class="card-text mb-2 fw-semibold">Luxury Penthouse with Big Private Pool </p>
+                        <p class="text-secondary mb-3"><i class="bi bi-geo-alt-fill me-1"></i> Orchard Road, District 9</p>
+                        <div class="d-flex justify-content-between text-secondary mb-3 small">
+                            <span><i class="bi bi-house-door me-1"></i> 4</span>
+                            <span><i class="bi bi-rulers me-1"></i> 3</span>
+                            <span><i class="bi bi-car me-1"></i> 2</span>
+                            <span><i class="bi bi-square-fill me-1"></i> 2,500 sqft</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-dark btn-sm flex-fill">View Details</a>
+                            <a href="#" class="btn btn-dark btn-sm flex-fill">Contact Agent</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Property Card 3 (Rent - HDB) --}}
+           <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                <div class="card property-card shadow-sm border-0 w-100">
+                    <div class="position-relative">
+                        {{-- Placeholder Image (Use your own image URL) --}}
+                        <img src="https://i2.au.reastatic.net/800x600/dbce6c9fb221a7493eeb9da13a1e3c0dbc29c372757dcc325c2070ba7a6bc8f1/image.jpg" class="card-img-top property-img" alt="Executive Apartment" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-primary text-white position-absolute top-0 start-0 m-2">Featured</span>
+                        <span class="badge bg-warning text-dark position-absolute top-0 start-0 ms-auto m-2" style="left: 65px!important;">For Rent</span>
+                        <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2 rounded-circle shadow-sm" aria-label="Add to favorites">
+                            <i class="bi bi-heart"></i>
+                             <>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title h5 fw-bold text-dark mb-1">$3,200 <span class="fw-normal text-secondary small">/month</span></h4>
+                        <p class="card-text mb-2 fw-semibold">Executive Apartment with Garden View</p>
+                        <p class="text-secondary mb-3"><i class="bi bi-geo-alt-fill me-1"></i> Bukit Timah, District 21</p>
+                        <div class="d-flex justify-content-between text-secondary mb-3 small">
+                            <span><i class="bi bi-house-door me-1"></i> 3</span>
+                            <span><i class="bi bi-rulers me-1"></i> 2</span>
+                            <span><i class="bi bi-car me-1"></i> 1</span>
+                            <span><i class="bi bi-square-fill me-1"></i> 1,100 sqft</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-dark btn-sm flex-fill">View Details</a>
+                            <a href="#" class="btn btn-dark btn-sm flex-fill">Contact Agent</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Property Card 4 (Rent) --}}
+            <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                <div class="card property-card shadow-sm border-0 w-100">
+                    <div class="position-relative">
+                        {{-- Placeholder Image (Use your own image URL) --}}
+                        <img src="https://i2.au.reastatic.net/800x600/dbce6c9fb221a7493eeb9da13a1e3c0dbc29c372757dcc325c2070ba7a6bc8f1/image.jpg" class="card-img-top property-img" class="card-img-top property-img" alt="Executive Apartment" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-primary text-white position-absolute top-0 start-0 m-2">Featured</span>
+                        <span class="badge bg-warning text-dark position-absolute top-0 start-0 ms-auto m-2" style="left: 65px!important;">For Rent</span>
+                        <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2 rounded-circle shadow-sm" aria-label="Add to favorites">
+                            <i class="bi bi-heart"></i>
+                             <>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title h5 fw-bold text-dark mb-1">$3,200 <span class="fw-normal text-secondary small">/month</span></h4>
+                        <p class="card-text mb-2 fw-semibold">Executive Apartment with Garden View</p>
+                        <p class="text-secondary mb-3"><i class="bi bi-geo-alt-fill me-1"></i> Bukit Timah, District 21</p>
+                        <div class="d-flex justify-content-between text-secondary mb-3 small">
+                            <span><i class="bi bi-house-door me-1"></i> 3</span>
+                            <span><i class="bi bi-rulers me-1"></i> 2</span>
+                            <span><i class="bi bi-car me-1"></i> 1</span>
+                            <span><i class="bi bi-square-fill me-1"></i> 1,100 sqft</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-dark btn-sm flex-fill">View Details</a>
+                            <a href="#" class="btn btn-dark btn-sm flex-fill">Contact Agent</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="text-center mt-5">
+            <a href="{{route('rent')}}" class="btn btn-lg btn-outline-dark">View All Properties</a>
         </div>
     </div>
 </section>
